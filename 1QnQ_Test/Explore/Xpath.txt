@@ -1,0 +1,11 @@
+//div[@class='gfield_description validation_message gfield_validation_message']
+//*[@id="validation_message_18_1"]
+
+
+Device name	DESKTOP-9NCQHSO
+Processor	Intel(R) Core(TM) i7-10610U CPU @ 1.80GHz   2.30 GHz
+Installed RAM	16.0 GB (15.6 GB usable)
+Device ID	5C0FC663-EB7E-4C8C-B05C-5AFD44BCAFF1
+Product ID	00330-80000-00000-AA622
+System type	64-bit operating system, x64-based processor
+Pen and touch	No pen or touch input is available for this display
