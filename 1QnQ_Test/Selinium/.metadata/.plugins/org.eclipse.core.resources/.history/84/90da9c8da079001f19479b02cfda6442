@@ -1,0 +1,186 @@
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class IT_Attend_TestScript {
+
+	public static void main(String[] args) throws InterruptedException {
+	
+		ChromeDriver driver = new ChromeDriver();
+		
+		//Load the ERP URL
+		String URL="http://192.168.1.39:8080/ERP-V0.1/index.html";		
+		driver.get(URL);
+		
+		//Maximize the browser
+		driver.manage().window().maximize();
+		
+		WebElement Uname= driver.findElement(By.id("email"));		
+		Thread.sleep(1000);
+		WebElement Pass= driver.findElement(By.id("password"));
+		Thread.sleep(1000);
+		WebElement Submit= driver.findElement(By.id("login-submit"));
+		
+		
+		Uname.sendKeys("Admin");
+		Pass.sendKeys("123456");
+		Submit.click();
+		
+		Thread.sleep(10000);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,250)", "");
+		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		String Dum ="(//a[@class='nav-link '])[143]";
+		WebElement DumNav= driver.findElement(By.xpath(Dum));
+		DumNav.click();
+		
+		String HRMenu ="body > div:nth-child(1) > aside:nth-child(2) > div:nth-child(2) > div:nth-child(4) > div:nth-child(1) "
+				+ "> div:nth-child(1) > nav:nth-child(1) > ul:nth-child(1) > li:nth-child(53) > a:nth-child(1)";		
+		
+		String DepMenu ="(//a[@class='nav-link '])[61]";
+		String ITMenu = "body div[class='wrapper'] li[class='nav-item has-treeview menu-open'] li[class='nav-item has-treeview menu-open']"
+				+ " li:nth-child(9) a:nth-child(1)";
+		
+		WebElement HRNav= driver.findElement(By.cssSelector(HRMenu));
+		HRNav.click();
+		//HRNav.click();
+		
+		Thread.sleep(3000);	
+		WebElement DepNav= driver.findElement(By.xpath(DepMenu));
+		DepNav.click();
+		
+		Thread.sleep(3000);		
+		WebElement ITNav= driver.findElement(By.cssSelector(ITMenu));
+		ITNav.click();
+		
+		//1st record
+		Thread.sleep(3000);	
+		WebElement Search= driver.findElement(By.xpath("//input[@type='search']"));
+		Search.sendKeys("Mani");
+		WebElement Atten= driver.findElement(By.xpath("/html/body/div[1]/div[1]/section[2]/div[1]/div[2]"
+				+ "/div/div/div[2]/form/div[1]/div/div/div/div[2]/div[2]/table/tbody/tr/td[7]/select"));
+		Atten.click();
+		Atten.sendKeys("Presnt");
+		Atten.sendKeys(Keys.ENTER);
+		
+		WebElement Shift= driver.findElement(By.xpath("/html/body/div[1]/div[1]/section[2]/div[1]/div[2]"
+				+ "/div/div/div[2]/form/div[1]/div/div/div/div[2]/div[2]/table/tbody/tr/td[8]/select"));
+		
+		Shift.click();
+		Shift.sendKeys("Full");
+		Shift.sendKeys(Keys.ENTER);
+		
+		//Click submit button
+		Thread.sleep(3000);	
+		WebElement Submit_button= driver.findElement(By.xpath("//button[@id='create1']"));
+		Submit_button.click();
+				
+		//2nd record
+		Thread.sleep(3000);	
+		WebElement Search2= driver.findElement(By.xpath("//input[@type='search']"));
+		Search2.clear();
+		Search2.sendKeys("Madhu");
+		WebElement Atten2= driver.findElement(By.xpath("/html/body/div[1]/div[1]/section[2]/div[1]/div[2]"
+				+ "/div/div/div[2]/form/div[1]/div/div/div/div[2]/div[2]/table/tbody/tr/td[7]/select"));
+		Atten2.click();
+		Atten2.sendKeys("Presnt");
+		Atten2.sendKeys(Keys.ENTER);
+		
+		WebElement Shift2= driver.findElement(By.xpath("/html/body/div[1]/div[1]/section[2]/div[1]/div[2]"
+				+ "/div/div/div[2]/form/div[1]/div/div/div/div[2]/div[2]/table/tbody/tr/td[8]/select"));
+		
+		Shift2.click();
+		Shift2.sendKeys("Full");
+		Shift2.sendKeys(Keys.ENTER);
+		
+		//3rd record
+		Thread.sleep(3000);	
+		WebElement Search3= driver.findElement(By.xpath("//input[@type='search']"));
+		Search3.clear();
+		Search3.sendKeys("test user");
+		WebElement Atten3= driver.findElement(By.xpath("/html/body/div[1]/div[1]/section[2]/div[1]/div[2]"
+				+ "/div/div/div[2]/form/div[1]/div/div/div/div[2]/div[2]/table/tbody/tr/td[7]/select"));
+		Atten3.click();
+		Atten3.sendKeys("Presnt");
+		Atten3.sendKeys(Keys.ENTER);
+		
+		WebElement Shift3= driver.findElement(By.xpath("/html/body/div[1]/div[1]/section[2]/div[1]/div[2]"
+				+ "/div/div/div[2]/form/div[1]/div/div/div/div[2]/div[2]/table/tbody/tr/td[8]/select"));
+		
+		Shift3.click();
+		Shift3.sendKeys("Full");
+		Shift3.sendKeys(Keys.ENTER);
+		
+		//4th record
+		Thread.sleep(3000);	
+		WebElement Search4= driver.findElement(By.xpath("//input[@type='search']"));
+		Search4.clear();
+		Search4.sendKeys("ravi");
+		WebElement Atten4= driver.findElement(By.xpath("/html/body/div[1]/div[1]/section[2]/div[1]/div[2]"
+				+ "/div/div/div[2]/form/div[1]/div/div/div/div[2]/div[2]/table/tbody/tr/td[7]/select"));
+		Atten4.click();
+		Atten4.sendKeys("Presnt");
+		Atten4.sendKeys(Keys.ENTER);
+		
+		WebElement Shift4= driver.findElement(By.xpath("/html/body/div[1]/div[1]/section[2]/div[1]/div[2]"
+				+ "/div/div/div[2]/form/div[1]/div/div/div/div[2]/div[2]/table/tbody/tr/td[8]/select"));
+		
+		Shift4.click();
+		Shift4.sendKeys("Full");
+		Shift4.sendKeys(Keys.ENTER);	
+		
+		//5th record
+		Thread.sleep(3000);	
+		WebElement Search5= driver.findElement(By.xpath("//input[@type='search']"));
+		Search5.clear();
+		Search5.sendKeys("Bharathi");
+		WebElement Atten5= driver.findElement(By.xpath("/html/body/div[1]/div[1]/section[2]/div[1]/div[2]"
+				+ "/div/div/div[2]/form/div[1]/div/div/div/div[2]/div[2]/table/tbody/tr/td[7]/select"));
+		Atten5.click();
+		Atten5.sendKeys("Presnt");
+		Atten5.sendKeys(Keys.ENTER);
+		
+		WebElement Shift5= driver.findElement(By.xpath("/html/body/div[1]/div[1]/section[2]/div[1]/div[2]"
+				+ "/div/div/div[2]/form/div[1]/div/div/div/div[2]/div[2]/table/tbody/tr/td[8]/select"));
+		
+		Shift5.click();
+		Shift5.sendKeys("Full");
+		Shift5.sendKeys(Keys.ENTER);
+		
+		
+		//6th record
+		Thread.sleep(3000);	
+		WebElement Search6= driver.findElement(By.xpath("//input[@type='search']"));
+		Search6.clear();
+		Search6.sendKeys("Kanimozhi");
+		WebElement Atten6= driver.findElement(By.xpath("/html/body/div[1]/div[1]/section[2]/div[1]/div[2]"
+				+ "/div/div/div[2]/form/div[1]/div/div/div/div[2]/div[2]/table/tbody/tr/td[7]/select"));
+		Atten6.click();
+		Atten6.sendKeys("Presnt");
+		Atten6.sendKeys(Keys.ENTER);
+		
+		WebElement Shift6= driver.findElement(By.xpath("/html/body/div[1]/div[1]/section[2]/div[1]/div[2]"
+				+ "/div/div/div[2]/form/div[1]/div/div/div/div[2]/div[2]/table/tbody/tr/td[8]/select"));
+		
+		Shift6.click();
+		Shift6.sendKeys("Full");
+		Shift6.sendKeys(Keys.ENTER);
+		
+		Thread.sleep(10000);
+		JavascriptExecutor js1 = (JavascriptExecutor) driver;
+		js1.executeScript("window.scrollBy(0,250)", "");
+		
+		//Click submit button
+		WebElement Submit_button2= driver.findElement(By.className("(btn bg-gradient-success"));
+		Submit_button2.click();
+       		
+		
+	}
+
+}

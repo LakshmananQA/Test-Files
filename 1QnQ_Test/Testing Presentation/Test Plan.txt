@@ -1,0 +1,90 @@
+Test lead or manager involve this phase:
+
+
+Object, Scope, Analyze the Product,Roles & Responsibility, 
+Estimation, Test Environment, Test delevirables and Deadline
+
+Testing Objectives:
+
+
+    Functional Verification: Ensure all features work as intended.
+    Data Accuracy: Validate data integrity and correctness.
+    UI/UX Assessment: Check usability and design consistency.
+    Scenario Testing: Evaluate performance under various conditions.
+
+
+
+Test Plan Scope
+
+    In-Scope:
+        Business flow
+        Data validation
+        User interface
+        Positive and negative scenarios
+    Out-of-Scope:
+        Integration testing
+        Performance testing (if not included)
+
+Test Strategy
+
+    Test Types:
+        Functional Testing
+        UI Testing
+        Validation Testing
+        Scenario Testing
+    Approach:
+        Business flow verification
+        Data cross-checking
+        UI manual and automated checks
+        Scenario execution
+
+
+Deliverables
+
+    Test Plan Document
+    Test Case Document
+    Test Execution Report
+    Defect Report
+    Test Summary Report
+
+
+Test Environment
+
+    Hardware: Specify devices and configurations.
+    Software: List browsers, OS, and tools.
+    Data: Test data sets and sources.
+
+
+Test Schedule
+
+    Test Planning: [Start Date] to [End Date]
+    Test Case Development: [Start Date] to [End Date]
+    Test Execution: [Start Date] to [End Date]
+    Test Reporting: [Start Date] to [End Date]
+
+
+Resources
+
+    Testers: List roles and responsibilities.
+    Tools: Mention test management and automation tools.
+
+
+Risks and Mitigations
+
+
+    Risk: Requirement changes
+        Mitigation: Regular stakeholder communication
+    Risk: Insufficient test data
+        Mitigation: Create or request comprehensive data sets
+    Risk: Incomplete test coverage
+        Mitigation: Thorough requirement review
+
+
+
+Slide 13: Q&A
+
+Title: Questions and Answers
+Content:
+
+    Open the floor for questions
+    Address any queries related to the test plan

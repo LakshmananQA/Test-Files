@@ -1,0 +1,73 @@
+package Excersise;
+
+import java.time.Duration;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class Exer_1 {
+
+	public static void main(String[] args) throws InterruptedException {
+			// TODO Auto-generated method stub
+		ChromeDriver driver = new ChromeDriver();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+
+        try {
+            // Navigate to the login page
+            driver.get("https://perfexcrm.com/demo/admin/authentication");
+
+            // Wait for the iframe containing the reCAPTCHA to load
+            wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("iframe[title='reCAPTCHA']")));
+
+            // Locate the "I'm not a robot" checkbox and click it
+            WebElement recaptchaCheckbox = driver.findElement(By.cssSelector("div.recaptcha-checkbox-border"));
+            recaptchaCheckbox.click();
+
+            // Switch back to the main content
+            driver.switchTo().defaultContent();
+
+            // Wait for the challenge iframe to load (if present)
+            wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("iframe[title*='recaptcha challenge']")));
+
+            // Locate the image tiles
+            List<WebElement> tiles = driver.findElements(By.cssSelector(".rc-imageselect-tile"));
+
+            // Example of processing tiles (pseudo-analysis, replace with real logic)
+            for (WebElement tile : tiles) {
+                // Retrieve background image of the tile
+                String imageUrl = tile.getCssValue("background-image").replace("url(\"", "").replace("\")", "");
+                System.out.println("Processing tile image: " + imageUrl);
+
+                // Replace analyzeImage with real image recognition logic
+                boolean containsMotorcycle = analyzeImage(imageUrl); // Placeholder function
+                if (containsMotorcycle) {
+                    tile.click(); // Click the tile if it contains a motorcycle
+                }
+            }
+
+            // Click the verify button (if applicable)
+            WebElement verifyButton = driver.findElement(By.id("recaptcha-verify-button"));
+            verifyButton.click();
+
+            System.out.println("CAPTCHA challenge completed!");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            // Close the browser
+            driver.quit();
+        }
+    }
+
+    // Pseudo function for image analysis
+    public static boolean analyzeImage(String imageUrl) {
+        // Replace this with actual image processing logic (e.g., OpenCV or AI model)
+        return false; // Return true if a motorcycle is detected
+    }
+}

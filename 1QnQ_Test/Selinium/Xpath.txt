@@ -1,0 +1,8 @@
+Relative xpath:
+
+//Tagname[@attribute=""]
+
+
+//a[text()='Thought for the day']
+
+//*[text()='Thought for the day']

@@ -1,0 +1,21 @@
+package Excersise;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Exer_1 {
+
+	public static void main(String[] args) {
+			// TODO Auto-generated method stub
+			ChromeDriver driver = new ChromeDriver();
+		     
+			String TestURL= "https://perfexcrm.com/demo/admin/authentication";
+			driver.get(TestURL);
+	        driver.manage().window().maximize();
+			
+	        driver.findElement(By.xpath("/html/body/div[2]/div[3]/div[1]/div/div/span/div[1]")).click();	
+	     	driver.findElement(By.xpath("/html/body/div[1]/div[3]/form/div[5]/button")).click();
+	 		
+	}
+
+}

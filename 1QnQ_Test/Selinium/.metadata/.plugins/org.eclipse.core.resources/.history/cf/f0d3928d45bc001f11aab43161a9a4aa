@@ -1,0 +1,43 @@
+package Ticket;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class CrtTicket {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+				ChromeDriver driver = new ChromeDriver();
+			     
+				String TestURL= "https://app.qnqpharmacy.com/ERP-V0.1/index.html";
+				driver.get(TestURL);
+		        driver.manage().window().maximize();
+				
+		        driver.findElement(By.id("email")).sendKeys("Sandhiya");		
+		     	driver.findElement(By.id("password")).sendKeys("Qnq@123");
+		 		driver.findElement(By.id("login-submit")).click();
+		 		
+		 		String GCUrl= driver.getCurrentUrl();
+		 		System.out.println(GCUrl);
+
+		 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		 		
+		 		WebElement TktSys  = driver.findElement(By.xpath("/html/body/div[1]/aside[1]/div/nav/ul/li[1]/a/p"));
+		 		TktSys.click();
+		 		
+		 		WebElement AddTkt  = driver.findElement(By.xpath("/html/body/div[1]/aside[1]/div/nav/ul/li[1]/ul/li[1]/a"));
+		 		AddTkt.click();
+		 		
+		 		WebElement CrtTkt  = driver.findElement(By.xpath("//button[@class='btn bg-gradient-success']"));
+		 		CrtTkt.click();
+		 		
+		 		WebElement Name  = driver.findElement(By.xpath("//span[@id='select2-EmployeeName-container']"));
+		 		Name.click();
+		 		Name.sendKeys("pavithra");
+
+	}
+
+}

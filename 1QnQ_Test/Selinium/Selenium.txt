@@ -1,0 +1,39 @@
+Instalation:
+----------------
+
+   1. Download and Install Java 8 or higher version -- Done
+   2. Download and configure Eclipse or any Java IDE of your choice-- Done
+   3. Download Selenium WebDriver Java Client --Done
+   4. Configure Selenium WebDriver --
+   5. ChromeDriver and FirefoxDriver --
+   6. Maven Tool & plugin --
+  
+
+Add jar files in eclipse:
+
+Create Project->Right click and click the properties->Java build->Libraries
+
+///////////////////////////////////////////
+Maven Proiject
+---------------
+
+1.Create Maven project
+2.pom.xml-->Add dependencies
+3.mvnrepository
+4.Copy paste the dependencies
+5.Update the Maven
+
+
+<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>4.24.0</version>
+</dependency>
+
+
+
+
+Read data in excel:
+
+Data provide

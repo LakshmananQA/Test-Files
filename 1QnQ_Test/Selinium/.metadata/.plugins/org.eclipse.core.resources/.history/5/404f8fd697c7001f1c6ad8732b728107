@@ -1,0 +1,44 @@
+package Excersise;
+
+import java.time.Duration;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class Exer_1 {
+
+	public static void main(String[] args) throws InterruptedException {
+			// TODO Auto-generated method stub
+		ChromeDriver driver = new ChromeDriver();
+
+        try {
+            // Open the login page
+            driver.get("https://perfexcrm.com/demo/admin/authentication");
+
+            // Wait for the iframe containing the reCAPTCHA to load
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+            wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("iframe[title='reCAPTCHA']")));
+
+            // Locate the "I'm not a robot" checkbox and click it
+            WebElement recaptchaCheckbox = driver.findElement(By.cssSelector("div.recaptcha-checkbox-border"));
+            recaptchaCheckbox.click();
+
+            // Switch back to the main content
+            driver.switchTo().defaultContent();
+
+            // Additional actions after interacting with the reCAPTCHA
+            System.out.println("reCAPTCHA checkbox clicked successfully!");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            // Close the browser
+          //  driver.quit();
+	        }
+	    }
+	}

@@ -1,0 +1,47 @@
+package Master;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class AddCategory {
+
+	public static void main(String[] args) throws InterruptedException {
+		ChromeDriver driver = new ChromeDriver();
+	     
+		String TestURL= "https://app.qnqpharmacy.com/ERP-V0.1/index.html";
+		driver.get(TestURL);
+        driver.manage().window().maximize();
+		
+        driver.findElement(By.id("email")).sendKeys("Admin");		
+     	driver.findElement(By.id("password")).sendKeys("123456");
+ 		driver.findElement(By.id("login-submit")).click();
+ 		
+ 		String GCUrl= driver.getCurrentUrl();
+ 		System.out.println(GCUrl);
+
+ 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+ 		
+ 		WebElement Database  = driver.findElement(By.xpath("/html/body/div[1]/aside[1]/div/div[4]/div/div/nav/ul/li[37]/a"));
+ 		Database.click();
+ 		
+ 		WebElement Ctg  = driver.findElement(By.xpath("/html/body/div[1]/aside[1]/div/nav/ul/li[37]/ul/li[5]/a"));
+ 		Ctg.click();
+ 		
+ 		WebElement Addbutton  = driver.findElement(By.xpath("//button[@class='btn bg-gradient-success']"));
+ 		Addbutton.click();
+ 		
+ 		Thread.sleep(2000);
+ 		
+ 		WebElement Category  = driver.findElement(By.id("Category"));
+ 		Category.sendKeys("Ltg");
+ 		
+ 		WebElement createbtn  = driver.findElement(By.id("create"));
+ 		createbtn.sendKeys("Ltg");
+
+	}
+
+}

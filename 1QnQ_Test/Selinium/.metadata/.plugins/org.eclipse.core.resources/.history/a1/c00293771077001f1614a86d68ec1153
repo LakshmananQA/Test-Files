@@ -1,0 +1,17 @@
+package SPprgm;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class First_Prgm {
+
+	public static void main(String[] args) {
+		System.out.println("Hi Selenium");
+		
+		//ChromeDriver driver=new ChromeDriver();
+		ChromeDriver driver = new ChromeDriver();
+		driver.get("https://app.qnqpharmacy.com/EmpServicePortal/index.html");
+;
+		
+	}
+
+}

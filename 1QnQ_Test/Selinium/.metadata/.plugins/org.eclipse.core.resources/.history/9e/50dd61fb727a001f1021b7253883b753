@@ -1,0 +1,110 @@
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class DataReaderFromExcel {
+
+	public static void main(String[] args) throws IOException, InterruptedException {
+	
+		ChromeDriver driver = new ChromeDriver();
+     
+		String URL="http://192.168.1.8:8080/ERP-V0.1/index.html";		
+		driver.get(URL);
+		
+		//Maximize the browser
+		driver.manage().window().maximize();
+		
+		WebElement Uname= driver.findElement(By.id("email"));		
+		WebElement Pass= driver.findElement(By.id("password"));
+		WebElement Submit= driver.findElement(By.id("login-submit"));
+		
+		
+		Uname.sendKeys("Admin");
+		Pass.sendKeys("123456");
+		Submit.click();
+		
+		Thread.sleep(5000);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		String Dum ="(//a[@class='nav-link '])[143]";
+		
+		
+		String HRMenu ="body > div:nth-child(1) > aside:nth-child(2) > div:nth-child(2) > div:nth-child(4) > div:nth-child(1) "
+				+ "> div:nth-child(1) > nav:nth-child(1) > ul:nth-child(1) > li:nth-child(53) > a:nth-child(1)";			
+		String DepMenu ="(//a[@class='nav-link '])[61]";
+		String ITMenu = "body div[class='wrapper'] li[class='nav-item has-treeview menu-open'] li[class='nav-item has-treeview menu-open']"
+				+ " li:nth-child(9) a:nth-child(1)";
+		
+		WebElement DumNav= driver.findElement(By.xpath(Dum));
+		DumNav.click();
+		
+		//Navigate to HR Module
+		WebElement HRNav= driver.findElement(By.cssSelector(HRMenu));
+		HRNav.click();
+		
+		//Navigate to Department AttendanceModule
+		Thread.sleep(2000);	
+		WebElement DepNav= driver.findElement(By.xpath(DepMenu));
+		DepNav.click();
+		
+		//Navigate to IT Attendance Module		
+		WebElement ITNav= driver.findElement(By.cssSelector(ITMenu));
+		ITNav.click();
+					
+		String excelFilePath=".\\datafiles\\ITTeam.xlsx";
+
+        // Open Excel file
+        FileInputStream fileinputStream = new FileInputStream(excelFilePath);
+
+        // Create a Workbook instance from the Excel file
+        XSSFWorkbook workbook = new XSSFWorkbook(fileinputStream);
+        
+        XSSFSheet sheet = workbook.getSheet("Sheet1");
+        
+       // int rowcount = sheet.getLastRowNum();
+       // int colcount =sheet.getRow(1).getLastCellNum();
+        //System.out.println(rowcount);
+        
+        for(int i=1; i<=sheet.getLastRowNum(); i++)
+        {
+          XSSFRow celldata=sheet.getRow(i);
+
+        String Searchvalue=celldata.getCell(0).getStringCellValue();
+        String Attendanance=celldata.getCell(1).getStringCellValue();
+        String Shift=celldata.getCell(2).getStringCellValue();
+        String Remarks=celldata.getCell(3).getStringCellValue();
+
+        WebElement Search= driver.findElement(By.xpath("//input[@type='search']"));
+
+		WebElement Atten1= driver.findElement(By.xpath("/html/body/div[1]/div[1]/section[2]/div[1]/div[2]"
+				+ "/div/div/div[2]/form/div[1]/div/div/div/div[2]/div[2]/table/tbody/tr/td[7]/select"));
+				
+		WebElement Shift1= driver.findElement(By.xpath("/html/body/div[1]/div[1]/section[2]/div[1]/div[2]"
+				+ "/div/div/div[2]/form/div[1]/div/div/div/div[2]/div[2]/table/tbody/tr/td[8]/select"));
+		
+		WebElement Remarks1= driver.findElement(By.xpath("/html/body/div[1]/div[1]/section[2]/div[1]/div[2]"
+		 		+ "/div/div/div[2]/form/div[1]/div/div/div/div[2]/div[2]/table/tbody/tr/td[10]/input"));
+		
+		Search.click();
+		Search.clear();
+		Search.sendKeys(Searchvalue);
+		Atten1.click();
+		Atten1.sendKeys(Attendanance);
+		Atten1.sendKeys(Keys.ENTER);
+		Shift1.sendKeys(Shift);
+		Remarks1.sendKeys(Remarks);
+        //Submit.click();
+
+        }
+	}
+
+}

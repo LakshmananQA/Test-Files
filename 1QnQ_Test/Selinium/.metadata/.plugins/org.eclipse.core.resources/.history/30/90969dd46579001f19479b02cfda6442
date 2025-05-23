@@ -1,0 +1,33 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class IT_Attend_TestScript {
+
+	public static void main(String[] args) throws InterruptedException {
+	
+		ChromeDriver driver = new ChromeDriver();
+		
+		//Load the ERP URL
+		String URL="https://app.qnqpharmacy.com/ERP/index.html";		
+		driver.get(URL);
+		
+		//Maximize the browser
+		driver.manage().window().maximize();
+		
+		WebElement Uname= driver.findElement(By.id("email"));		
+		Thread.sleep(1000);
+		WebElement Pass= driver.findElement(By.id("password"));
+		Thread.sleep(1000);
+		WebElement Submit= driver.findElement(By.id("login-submit"));
+		
+		
+		Uname.sendKeys("Admin");
+		Pass.sendKeys("123456");
+		Submit.click();
+		
+
+
+	}
+
+}
