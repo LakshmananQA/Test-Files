@@ -1,0 +1,89 @@
+AnyDesk
+1520828421
+
+
+Hr Empservice
+---------------------
+
+
+https://app.qnqpharmacy.com/EmpServicePortal/index.html
+
+
+Training Tracker
+---------------------
+
+https://app.qnqpharmacy.com/TrainingTracker/index.html
+
+User Name: mohanraj
+Password : Qnq$231
+
+
+
+ERP
+----------
+Wifi:
+
+http://192.168.0.134:8080/ERP-V0.1/index.html
+
+
+
+Lan:
+
+http://192.168.1.8:8080/ERP-V0.1/index.html
+http://192.168.1.39:8080/ERP-V0.1/index.html
+
+http://192.168.86.142:8080/ERP-V0.1/Emp/index.html
+
+
+
+POS:
+-------------
+
+https://app.qnqpharmacy.com/postest/#/login
+
+Username: pharmacy_VPMThanthai
+Password : periqnq#861
+
+
+Optical-crm
+---------------
+
+https://app.qnqpharmacy.com/optical-crm-ui/login.html
+
+
+Username: Admin
+Password: 123456
+/////////////////////////////////////////////////////////////////////////////////
+
+
+http://192.168.86.142:8080/ERP-V0.1/index.html.
+
+/////////////////////////////////////////////////
+
+workfolio
+--------------
+
+https://app.getworkfolio.com
+
+Lakshmanan.m@qnqhealthcare.in
+Lak@2023
+
+
+////////////////////////////////////////////////////
+
+https://github.com
+
+lakshmanan.m@qnqhealthcare.in
+Lak@2024
+
+/////////////////////////////////////////////////////
+
+Jira
+------
+
+https://id.atlassian.com
+
+Lakshmanan.M@qnqhealthcare.in
+Lak@2024
+
+///////////////////////////////////////////////////////
