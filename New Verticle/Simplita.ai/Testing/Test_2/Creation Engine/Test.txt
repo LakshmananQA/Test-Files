@@ -1,0 +1,113 @@
+1. Personal Information Form
+
+Full Name: ___________________________
+
+Date of Birth: ________________
+
+Gender: [ ] Male  [ ] Female  [ ] Other
+
+Email Address: ___________________________
+
+Phone Number: ___________________________
+
+2. Address Form
+
+Street Address: ___________________________
+
+City: ___________________________
+
+State/Province: ___________________________
+
+Zip/Postal Code: ___________________________
+
+Country: ___________________________
+
+3. Employment Form
+
+Current Employer: ___________________________
+
+Job Title: ___________________________
+
+Work Phone: ___________________________
+
+Years of Experience: ___________________________
+
+Expected Salary: ___________________________
+
+4. Education Form
+
+Highest Qualification: [ ] High School  [ ] Bachelor's  [ ] Master's  [ ] PhD  [ ] Other
+
+Institution Name: ___________________________
+
+Year of Graduation: ________________
+
+GPA/Percentage: ___________________________
+
+5. Medical History Form
+
+Any Chronic Illnesses: ___________________________
+
+Current Medications: ___________________________
+
+Allergies: ___________________________
+
+Primary Doctor's Name: ___________________________
+
+Emergency Contact: ___________________________
+
+6. Travel Information Form
+
+Passport Number: ___________________________
+
+Country of Issue: ___________________________
+
+Visa Type: [ ] Tourist [ ] Work [ ] Student [ ] Other
+
+Travel Dates: ________________ to ________________
+
+Destination Address: ___________________________
+
+7. Feedback Form
+
+How did you hear about us? ___________________________
+
+Rate our service: [ ] Excellent [ ] Good [ ] Average [ ] Poor
+
+Suggestions for improvement: ___________________________
+
+8. Conference Registration Form
+
+Name: ___________________________
+
+Organization: ___________________________
+
+Designation: ___________________________
+
+Topics of Interest: ___________________________
+
+Dietary Preferences: [ ] Vegetarian [ ] Non-Vegetarian [ ] Vegan
+
+9. Volunteer Application Form
+
+Name: ___________________________
+
+Areas of Interest: ___________________________
+
+Availability: [ ] Weekdays [ ] Weekends [ ] Flexible
+
+Skills/Experience: ___________________________
+
+10. Loan Application Form
+
+Loan Amount: ___________________________
+
+Purpose of Loan: ___________________________
+
+Monthly Income: ___________________________
+
+Employment Status: [ ] Employed [ ] Self-Employed [ ] Unemployed
+
+References: ___________________________
+
+Signature: ___________________________Date: ________________

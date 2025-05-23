@@ -1,0 +1,85 @@
+1.
+Act as an expert code reviewer. I need you to analyze the code within the folder located at `[YOUR_FOLDER_PATH]` in my current project.
+
+Your primary goal is to identify and report on the following:
+
+1.  **Unused Code:**
+    * Scan all files within the specified folder.
+    * Identify and list any unused functions, methods, classes, variables, constants, and import statements.
+    * For each item, specify the file path and the name of the unused code element.
+
+2.  **Potentially Unwanted or Orphaned Pages:**
+    * (If this is a web application project) Examine files that appear to define UI pages or routes within the specified folder (e.g., components in a 'pages' directory, route definitions).
+    * Identify any such pages that do not appear to be linked from other parts of the application, are not included in navigation structures, or have no active routes pointing to them.
+    * List the file path of each potentially unwanted page and provide a brief reason for your suspicion (e.g., "No incoming links or route found").
+
+3.  **Potentially Unused Feature Modules/Components:**
+    * Look for larger, self-contained modules, collections of components, services, or sets of related files within the specified folder that might represent a distinct feature.
+    * Analyze if these potential feature modules have clear entry points or are actively invoked/utilized by other active parts of the application (either within this folder or globally, if you can determine that).
+    * List the primary file(s) or sub-folder(s) representing each potentially unused feature and explain why it appears unused (e.g., "No apparent usage or invocation of this module's public interface").
+
+**For your report, please structure the findings clearly, ideally grouped by the categories above (Unused Code, Unwanted Pages, Unused Features). For each finding, include:**
+* Full file path.
+* Name of the specific unused item (function name, class name, page component name, feature module name/files).
+* A brief justification for why it's flagged as potentially unused.
+
+**Optional additions to make the prompt even more effective (provide this context if you can):**
+
+* "For context, this project is a `[e.g., React frontend, Python Django backend, Node.js microservice]`."
+* "The main technologies used in this folder are `[e.g., TypeScript, Python, specific frameworks like Express.js, etc.]`."
+* "A 'page' in this context is typically defined as `[e.g., a React component in the /pages directory that is linked via react-router, an HTML file, etc.]`."
+* "A 'feature' might be represented by `[e.g., a set of files in a dedicated feature subfolder, a specific service class and its related utilities, etc.]`."
+
+**Tips for working with Cursor.ai (and similar AI tools):**
+
+* **Be Specific with Paths:** Ensure `[YOUR_FOLDER_PATH]` is accurate and clear.
+* **Iterate:** If the initial results aren't perfect, don't hesitate to ask follow-up questions or refine your request. For example:
+    * "Can you double-check if `[specific function name]` is truly unused? I thought it might be used by `[another part of the system]`."
+    * "For the unused features, can you elaborate on why `[specific feature module]` was flagged?"
+* **Review AI Suggestions Critically:** AI is a powerful assistant, but it's not infallible. Always use your judgment to confirm its findings, especially for more complex items like "unused features," which can be subjective and require deeper project understanding.
+* **Small Chunks:** If the folder is very large, you might consider breaking down the request or focusing on sub-folders if the AI struggles with the overall scope.
+
+This prompt is designed to be detailed to give the AI the best chance of understanding your specific needs. Good luck!
+
+////////////////////////////////////////////////////////////////////////////////
+
+Prompt:2
+
+SYSTEM:
+You are an expert code reviewer with deep knowledge of our project’s conventions.  
+Your task is to analyze the code under the folder:  
+> src/<target-folder-path>  
+
+USER:
+1. **Scope**  
+   - Review all files and subdirectories under `src/<target-folder-path>`.  
+   - Focus on identifying:
+     - **Unused code** (variables, functions, classes never referenced).
+     - **Unwanted pages** (UI views or routes no longer linked or rendered).
+     - **Deprecated or hidden features** (code toggled off, feature flags inactive).
+
+2. **Tasks**  
+   a. **List all unused code segments** grouped by file, with line numbers.  
+   b. **Identify pages** that have no inbound links or route definitions.  
+   c. **Highlight unused feature flags** or commented-out blocks indicating deprecated features.  
+   d. **Suggest deletions or refactors** for each item.
+
+3. **Output Format**  
+   - Provide a **Markdown report** with three sections:  
+     1. **Unused Code**  
+     2. **Unwanted Pages**  
+     3. **Unused Features**  
+   - Within each section, use bullet points:  
+     - File path + line numbers  
+     - Short description of why it’s unused or unwanted  
+   - End with a **summary** recommending next steps (e.g., delete vs. refactor).  
+
+4. **Assumptions & Constraints**  
+   - Ignore test files (e.g., `*.spec.ts`, `*.test.js`).  
+   - Exclude third-party dependencies and auto-generated files.  
+   - Assume the latest code is on the `main` branch.
+
+AGENT:
+Proceed with the analysis and generate the report.
+
+////////////////////////////////////////////////

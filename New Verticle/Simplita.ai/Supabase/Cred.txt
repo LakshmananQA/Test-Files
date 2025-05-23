@@ -1,0 +1,28 @@
+SUPABASE Cred:
+lakshmanan.m@qnqhealthcare.in
+Lakshmanan@2025
+/////////////////////////////////////////////
+
+
+SUPABASE_URL=https://auhnuppfnfpwtiiqjzxn.supabase.co
+SUPABASE_SERVICE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF1aG51cHBmbmZwd3RpaXFqenhuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzgwNTk3MjgsImV4cCI6MjA1MzYzNTcyOH0.2m_8Q4uoGm3GhB6GhSkrK6Wdqq6evOJ4q_UCZ6vGFGs
+DATABASE_URL=postgresql://postgres.kgvxiouvkzgugwkjkmpw:Simplita%401234@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres
+
+
+
+
+
+SUPABASE_URL: https://kgvxiouvkzgugwkjkmpw.supabase.co
+SUPABASE_SERVICE_KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtndnhpb3V2a3pndWd3a2prbXB3Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTczNzQzNDI1MSwiZXhwIjoyMDUzMDEwMjUxfQ.wnrwwaERASVBjaNhbkIWuXhcEMYGUhPBQw_zPgFwL64
+DB Password: Simplita@1234
+Additional Information:
+Install PG Admin to access and manage the tables in the database easily.
+Hostname: db.kgvxiouvkzgugwkjkmpw.supabase.co
+
+
+
+DATABASE_URL=postgresql://postgres:ITproject%401234R@db.upedvixeokgbibigrrko.supabase.co:5432/postgres
+SUPABASE_URL=https://upedvixeokgbibigrrko.supabase.co
+SUPABASE_SERVICE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVwZWR2aXhlb2tnYmliaWdycmtvIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTczNTg3Njk2NCwiZXhwIjoyMDUxNDUyOTY0fQ.cx4O4KPLTJvIL2q6iEYfEESFSQzfbhPNUKlW07gef2I
+CORS_ALLOWED_ORIGINS=http://localhost:8000
+NEXT_PUBLIC_BACKEND_URL=http://localhost:8000

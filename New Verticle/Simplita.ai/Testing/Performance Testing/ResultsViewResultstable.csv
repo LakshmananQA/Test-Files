@@ -1,0 +1,3 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1741607952853,938,https://api.simplita.ai/api/v1/auth/login,200,OK,Thread Group 1-1,text,true,,1279,1407,1,1,https://api.simplita.ai/api/v1/auth/login,938,0,259
+1741607952851,938,Test,200,"Number of samples in transaction : 1, number of failing samples : 0",Thread Group 1-1,,true,,1279,1407,1,1,null,938,3,259

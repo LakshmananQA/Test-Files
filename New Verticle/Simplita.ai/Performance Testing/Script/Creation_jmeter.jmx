@@ -1,0 +1,845 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Creation_jmeter" enabled="true">
+      <stringProp name="TestPlan.comments">This test plan was created by the BlazeMeter converter v.${project.version}. Please contact support@blazemeter.com for further support.</stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="sec-ch-ua" elementType="Header">
+            <stringProp name="Header.name">sec-ch-ua</stringProp>
+            <stringProp name="Header.value">&quot;Chromium&quot;;v=&quot;136&quot;, &quot;Google Chrome&quot;;v=&quot;136&quot;, &quot;Not.A/Brand&quot;;v=&quot;99&quot;</stringProp>
+          </elementProp>
+          <elementProp name="sec-ch-ua-mobile" elementType="Header">
+            <stringProp name="Header.name">sec-ch-ua-mobile</stringProp>
+            <stringProp name="Header.value">?0</stringProp>
+          </elementProp>
+          <elementProp name="sec-ch-ua-platform" elementType="Header">
+            <stringProp name="Header.name">sec-ch-ua-platform</stringProp>
+            <stringProp name="Header.value">&quot;Windows&quot;</stringProp>
+          </elementProp>
+          <elementProp name="User-Agent" elementType="Header">
+            <stringProp name="Header.name">User-Agent</stringProp>
+            <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36</stringProp>
+          </elementProp>
+          <elementProp name="DNT" elementType="Header">
+            <stringProp name="Header.name">DNT</stringProp>
+            <stringProp name="Header.value">1</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="BASE_URL_1" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_1</stringProp>
+            <stringProp name="Argument.value">api.simplita.ai</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="BASE_URL_2" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_2</stringProp>
+            <stringProp name="Argument.value">app.simplita.ai</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+        <boolProp name="HTTPSampler.image_parser">true</boolProp>
+        <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+        <intProp name="HTTPSampler.concurrentPool">6</intProp>
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.implementation"></stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <DNSCacheManager guiclass="DNSCachePanel" testclass="DNSCacheManager" testname="DNS Cache Manager" enabled="true">
+        <collectionProp name="DNSCacheManager.servers"/>
+        <collectionProp name="DNSCacheManager.hosts"/>
+        <boolProp name="DNSCacheManager.clearEachIteration">true</boolProp>
+        <boolProp name="DNSCacheManager.isCustomResolver">false</boolProp>
+      </DNSCacheManager>
+      <hashTree/>
+      <AuthManager guiclass="AuthPanel" testclass="AuthManager" testname="HTTP Authorization Manager" enabled="true">
+        <collectionProp name="AuthManager.auth_list"/>
+        <boolProp name="AuthManager.controlledByThreadGroup">false</boolProp>
+      </AuthManager>
+      <hashTree/>
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+        <collectionProp name="CookieManager.cookies"/>
+        <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+        <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
+      </CookieManager>
+      <hashTree/>
+      <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager" enabled="true">
+        <boolProp name="clearEachIteration">true</boolProp>
+        <boolProp name="useExpires">false</boolProp>
+        <boolProp name="CacheManager.controlledByThread">false</boolProp>
+      </CacheManager>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group">
+        <intProp name="ThreadGroup.num_threads">250</intProp>
+        <intProp name="ThreadGroup.ramp_time">2</intProp>
+        <longProp name="ThreadGroup.duration">0</longProp>
+        <longProp name="ThreadGroup.delay">0</longProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController">
+          <stringProp name="LoopController.loops">2</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Test">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://app.simplita.ai/api/projects/user/83bfc877-526c-4d4d-b8a8-3f5221c0dba7">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/projects/user/83bfc877-526c-4d4d-b8a8-3f5221c0dba7</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Authorization" elementType="Header">
+                  <stringProp name="Header.name">Authorization</stringProp>
+                  <stringProp name="Header.value">Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IjlpWmxia2dBdGpuRlFCbGEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2tndnhpb3V2a3pndWd3a2prbXB3LnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiI4M2JmYzg3Ny01MjZjLTRkNGQtYjhhOC0zZjUyMjFjMGRiYTciLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzQ3NDY3ODcxLCJpYXQiOjE3NDc0NjQyNzEsImVtYWlsIjoibGFrc2htYW5hbi5tQHFucWhlYWx0aGNhcmUuaW4iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIiwiZ2l0aHViIl19LCJ1c2VyX21ldGFkYXRhIjp7ImF2YXRhcl91cmwiOiJodHRwczovL2F2YXRhcnMuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3UvMTc5NTU2NjczP3Y9NCIsImVtYWlsIjoibGFrc2htYW5hbi5tQHFucWhlYWx0aGNhcmUuaW4iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6Ly9hcGkuZ2l0aHViLmNvbSIsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiTGFrc2htYW5hblFBIiwicHJvdmlkZXJfaWQiOiIxNzk1NTY2NzMiLCJzdWIiOiIxNzk1NTY2NzMiLCJ1c2VyX25hbWUiOiJMYWtzaG1hbmFuUUEifSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc0NzQ2NDI3MX1dLCJzZXNzaW9uX2lkIjoiZDQzNTBiZTYtYjk2MS00MjEyLThkZjAtZDhmMWZiNWQwOTc3IiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.SDTxhYHUhg0lFeqve0adt0nh6jlv3P5V4lsIVipH4ls</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://api.simplita.ai/components-create/user/83bfc877-526c-4d4d-b8a8-3f5221c0dba7">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">components-create/user/83bfc877-526c-4d4d-b8a8-3f5221c0dba7</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Authorization" elementType="Header">
+                  <stringProp name="Header.name">Authorization</stringProp>
+                  <stringProp name="Header.value">Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IjlpWmxia2dBdGpuRlFCbGEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2tndnhpb3V2a3pndWd3a2prbXB3LnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiI4M2JmYzg3Ny01MjZjLTRkNGQtYjhhOC0zZjUyMjFjMGRiYTciLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzQ3NDY3ODcxLCJpYXQiOjE3NDc0NjQyNzEsImVtYWlsIjoibGFrc2htYW5hbi5tQHFucWhlYWx0aGNhcmUuaW4iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIiwiZ2l0aHViIl19LCJ1c2VyX21ldGFkYXRhIjp7ImF2YXRhcl91cmwiOiJodHRwczovL2F2YXRhcnMuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3UvMTc5NTU2NjczP3Y9NCIsImVtYWlsIjoibGFrc2htYW5hbi5tQHFucWhlYWx0aGNhcmUuaW4iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6Ly9hcGkuZ2l0aHViLmNvbSIsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiTGFrc2htYW5hblFBIiwicHJvdmlkZXJfaWQiOiIxNzk1NTY2NzMiLCJzdWIiOiIxNzk1NTY2NzMiLCJ1c2VyX25hbWUiOiJMYWtzaG1hbmFuUUEifSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc0NzQ2NDI3MX1dLCJzZXNzaW9uX2lkIjoiZDQzNTBiZTYtYjk2MS00MjEyLThkZjAtZDhmMWZiNWQwOTc3IiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.SDTxhYHUhg0lFeqve0adt0nh6jlv3P5V4lsIVipH4ls</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://app.simplita.ai/workspace?_rsc=znp18">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">workspace</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="_rsc" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">_rsc</stringProp>
+                  <stringProp name="Argument.value">znp18</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="RSC" elementType="Header">
+                  <stringProp name="Header.name">RSC</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Next-Router-Prefetch" elementType="Header">
+                  <stringProp name="Header.name">Next-Router-Prefetch</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Next-Router-State-Tree" elementType="Header">
+                  <stringProp name="Header.name">Next-Router-State-Tree</stringProp>
+                  <stringProp name="Header.value">%5B%22%22%2C%7B%22children%22%3A%5B%22workspace%22%2C%7B%22children%22%3A%5B%22__PAGE__%22%2C%7B%7D%5D%7D%2Cnull%2Cnull%2Ctrue%5D%7D%2Cnull%2Cnull%2Ctrue%5D</stringProp>
+                </elementProp>
+                <elementProp name="Next-Url" elementType="Header">
+                  <stringProp name="Header.name">Next-Url</stringProp>
+                  <stringProp name="Header.value">/workspace</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://api.simplita.ai/api/projects/createcard">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/projects/createcard</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;name&quot;:&quot;Test-Jmeter&quot;,&quot;status&quot;:&quot;active&quot;,&quot;user_id&quot;:&quot;83bfc877-526c-4d4d-b8a8-3f5221c0dba7&quot;,&quot;created_at&quot;:&quot;2025-05-17T06:44:51.726Z&quot;,&quot;updated_at&quot;:&quot;2025-05-17T06:44:51.726Z&quot;,&quot;app_type&quot;:&quot;default&quot;,&quot;needs_auth&quot;:false,&quot;auth_type&quot;:&quot;none&quot;,&quot;description&quot;:&quot;Default project&quot;,&quot;storage_bucket&quot;:&quot;default&quot;,&quot;storage_path&quot;:&quot;default&quot;,&quot;files&quot;:[]}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Authorization" elementType="Header">
+                  <stringProp name="Header.name">Authorization</stringProp>
+                  <stringProp name="Header.value">Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IjlpWmxia2dBdGpuRlFCbGEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2tndnhpb3V2a3pndWd3a2prbXB3LnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiI4M2JmYzg3Ny01MjZjLTRkNGQtYjhhOC0zZjUyMjFjMGRiYTciLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzQ3NDY3ODcxLCJpYXQiOjE3NDc0NjQyNzEsImVtYWlsIjoibGFrc2htYW5hbi5tQHFucWhlYWx0aGNhcmUuaW4iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIiwiZ2l0aHViIl19LCJ1c2VyX21ldGFkYXRhIjp7ImF2YXRhcl91cmwiOiJodHRwczovL2F2YXRhcnMuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3UvMTc5NTU2NjczP3Y9NCIsImVtYWlsIjoibGFrc2htYW5hbi5tQHFucWhlYWx0aGNhcmUuaW4iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6Ly9hcGkuZ2l0aHViLmNvbSIsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiTGFrc2htYW5hblFBIiwicHJvdmlkZXJfaWQiOiIxNzk1NTY2NzMiLCJzdWIiOiIxNzk1NTY2NzMiLCJ1c2VyX25hbWUiOiJMYWtzaG1hbmFuUUEifSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc0NzQ2NDI3MX1dLCJzZXNzaW9uX2lkIjoiZDQzNTBiZTYtYjk2MS00MjEyLThkZjAtZDhmMWZiNWQwOTc3IiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.SDTxhYHUhg0lFeqve0adt0nh6jlv3P5V4lsIVipH4ls</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://api.simplita.ai/api/projects/user/83bfc877-526c-4d4d-b8a8-3f5221c0dba7">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/projects/user/83bfc877-526c-4d4d-b8a8-3f5221c0dba7</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Authorization" elementType="Header">
+                  <stringProp name="Header.name">Authorization</stringProp>
+                  <stringProp name="Header.value">Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IjlpWmxia2dBdGpuRlFCbGEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2tndnhpb3V2a3pndWd3a2prbXB3LnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiI4M2JmYzg3Ny01MjZjLTRkNGQtYjhhOC0zZjUyMjFjMGRiYTciLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzQ3NDY3ODcxLCJpYXQiOjE3NDc0NjQyNzEsImVtYWlsIjoibGFrc2htYW5hbi5tQHFucWhlYWx0aGNhcmUuaW4iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIiwiZ2l0aHViIl19LCJ1c2VyX21ldGFkYXRhIjp7ImF2YXRhcl91cmwiOiJodHRwczovL2F2YXRhcnMuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3UvMTc5NTU2NjczP3Y9NCIsImVtYWlsIjoibGFrc2htYW5hbi5tQHFucWhlYWx0aGNhcmUuaW4iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6Ly9hcGkuZ2l0aHViLmNvbSIsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiTGFrc2htYW5hblFBIiwicHJvdmlkZXJfaWQiOiIxNzk1NTY2NzMiLCJzdWIiOiIxNzk1NTY2NzMiLCJ1c2VyX25hbWUiOiJMYWtzaG1hbmFuUUEifSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc0NzQ2NDI3MX1dLCJzZXNzaW9uX2lkIjoiZDQzNTBiZTYtYjk2MS00MjEyLThkZjAtZDhmMWZiNWQwOTc3IiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.SDTxhYHUhg0lFeqve0adt0nh6jlv3P5V4lsIVipH4ls</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://api.simplita.ai/api/projects/2bd3d419-89ab-440b-9e47-230047b8ae5f" enabled="true">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/projects/2bd3d419-89ab-440b-9e47-230047b8ae5f</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">PUT</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;status&quot;:&quot;active&quot;,&quot;app_type&quot;:&quot;HRM&quot;,&quot;needs_auth&quot;:false,&quot;auth_type&quot;:&quot;none&quot;,&quot;description&quot;:&quot;&quot;,&quot;updated_at&quot;:&quot;2025-05-17T06:44:52.752Z&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Authorization" elementType="Header">
+                  <stringProp name="Header.name">Authorization</stringProp>
+                  <stringProp name="Header.value">Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IjlpWmxia2dBdGpuRlFCbGEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2tndnhpb3V2a3pndWd3a2prbXB3LnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiI4M2JmYzg3Ny01MjZjLTRkNGQtYjhhOC0zZjUyMjFjMGRiYTciLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzQ3NDY3ODcxLCJpYXQiOjE3NDc0NjQyNzEsImVtYWlsIjoibGFrc2htYW5hbi5tQHFucWhlYWx0aGNhcmUuaW4iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIiwiZ2l0aHViIl19LCJ1c2VyX21ldGFkYXRhIjp7ImF2YXRhcl91cmwiOiJodHRwczovL2F2YXRhcnMuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3UvMTc5NTU2NjczP3Y9NCIsImVtYWlsIjoibGFrc2htYW5hbi5tQHFucWhlYWx0aGNhcmUuaW4iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6Ly9hcGkuZ2l0aHViLmNvbSIsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiTGFrc2htYW5hblFBIiwicHJvdmlkZXJfaWQiOiIxNzk1NTY2NzMiLCJzdWIiOiIxNzk1NTY2NzMiLCJ1c2VyX25hbWUiOiJMYWtzaG1hbmFuUUEifSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc0NzQ2NDI3MX1dLCJzZXNzaW9uX2lkIjoiZDQzNTBiZTYtYjk2MS00MjEyLThkZjAtZDhmMWZiNWQwOTc3IiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.SDTxhYHUhg0lFeqve0adt0nh6jlv3P5V4lsIVipH4ls</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://app.simplita.ai/editor?_rsc=znp18">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">editor</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="_rsc" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">_rsc</stringProp>
+                  <stringProp name="Argument.value">znp18</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="RSC" elementType="Header">
+                  <stringProp name="Header.name">RSC</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Next-Router-Prefetch" elementType="Header">
+                  <stringProp name="Header.name">Next-Router-Prefetch</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Next-Router-State-Tree" elementType="Header">
+                  <stringProp name="Header.name">Next-Router-State-Tree</stringProp>
+                  <stringProp name="Header.value">%5B%22%22%2C%7B%22children%22%3A%5B%22workspace%22%2C%7B%22children%22%3A%5B%22__PAGE__%22%2C%7B%7D%5D%7D%2Cnull%2Cnull%2Ctrue%5D%7D%2Cnull%2Cnull%2Ctrue%5D</stringProp>
+                </elementProp>
+                <elementProp name="Next-Url" elementType="Header">
+                  <stringProp name="Header.name">Next-Url</stringProp>
+                  <stringProp name="Header.value">/workspace</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://app.simplita.ai/editor?_rsc=88mvb">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">editor</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="_rsc" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">_rsc</stringProp>
+                  <stringProp name="Argument.value">88mvb</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="RSC" elementType="Header">
+                  <stringProp name="Header.name">RSC</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Next-Router-State-Tree" elementType="Header">
+                  <stringProp name="Header.name">Next-Router-State-Tree</stringProp>
+                  <stringProp name="Header.value">%5B%22%22%2C%7B%22children%22%3A%5B%22editor%22%2C%7B%22children%22%3A%5B%22__PAGE__%22%2C%7B%7D%5D%7D%2Cnull%2C%22refetch%22%5D%7D%5D</stringProp>
+                </elementProp>
+                <elementProp name="Next-Url" elementType="Header">
+                  <stringProp name="Header.name">Next-Url</stringProp>
+                  <stringProp name="Header.value">/editor</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://api.simplita.ai/api/layouts/pages?skip=0&amp;limit=100&amp;project_id=2bd3d419-89ab-440b-9e47-230047b8ae5f">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/layouts/pages</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="project_id" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">project_id</stringProp>
+                  <stringProp name="Argument.value">2bd3d419-89ab-440b-9e47-230047b8ae5f</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="limit" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">limit</stringProp>
+                  <stringProp name="Argument.value">100</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="skip" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">skip</stringProp>
+                  <stringProp name="Argument.value">0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://api.simplita.ai/api/layouts/pages?skip=0&amp;limit=100&amp;project_id=2bd3d419-89ab-440b-9e47-230047b8ae5f">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/layouts/pages</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="project_id" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">project_id</stringProp>
+                  <stringProp name="Argument.value">2bd3d419-89ab-440b-9e47-230047b8ae5f</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="limit" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">limit</stringProp>
+                  <stringProp name="Argument.value">100</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="skip" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">skip</stringProp>
+                  <stringProp name="Argument.value">0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://api.simplita.ai/api/layouts/pages?skip=0&amp;limit=100&amp;project_id=2bd3d419-89ab-440b-9e47-230047b8ae5f">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/layouts/pages</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="project_id" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">project_id</stringProp>
+                  <stringProp name="Argument.value">2bd3d419-89ab-440b-9e47-230047b8ae5f</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="limit" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">limit</stringProp>
+                  <stringProp name="Argument.value">100</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="skip" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">skip</stringProp>
+                  <stringProp name="Argument.value">0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://api.simplita.ai/api/layouts/pages?skip=0&amp;limit=100&amp;project_id=2bd3d419-89ab-440b-9e47-230047b8ae5f">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/layouts/pages</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="project_id" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">project_id</stringProp>
+                  <stringProp name="Argument.value">2bd3d419-89ab-440b-9e47-230047b8ae5f</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="limit" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">limit</stringProp>
+                  <stringProp name="Argument.value">100</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="skip" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">skip</stringProp>
+                  <stringProp name="Argument.value">0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://api.simplita.ai/api/layouts/pages" enabled="true">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/layouts/pages</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;name&quot;:&quot;Page 1&quot;,&quot;content&quot;:{&quot;components&quot;:[],&quot;canvas&quot;:{&quot;width&quot;:1200,&quot;height&quot;:800,&quot;backgroundColor&quot;:&quot;#ffffff&quot;}},&quot;project_id&quot;:&quot;2bd3d419-89ab-440b-9e47-230047b8ae5f&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://api.simplita.ai/api/layouts/pages?skip=0&amp;limit=100&amp;project_id=2bd3d419-89ab-440b-9e47-230047b8ae5f">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/layouts/pages</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="project_id" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">project_id</stringProp>
+                  <stringProp name="Argument.value">2bd3d419-89ab-440b-9e47-230047b8ae5f</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="limit" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">limit</stringProp>
+                  <stringProp name="Argument.value">100</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="skip" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">skip</stringProp>
+                  <stringProp name="Argument.value">0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://api.simplita.ai/api/layouts/pages/page-17474643002863626">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">api/layouts/pages/page-17474643002863626</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">PUT</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;content&quot;:{&quot;components&quot;:[{&quot;id&quot;:&quot;id-17474643088601317&quot;,&quot;type&quot;:&quot;form&quot;,&quot;attributes&quot;:{},&quot;style&quot;:{&quot;padding&quot;:&quot;24px&quot;,&quot;border&quot;:&quot;1px solid #e2e8f0&quot;,&quot;border-radius&quot;:&quot;8px&quot;,&quot;max-width&quot;:&quot;1550px&quot;,&quot;margin&quot;:&quot;0 auto&quot;},&quot;components&quot;:[{&quot;id&quot;:&quot;id-17474643088608894&quot;,&quot;type&quot;:&quot;h2&quot;,&quot;attributes&quot;:{},&quot;style&quot;:{&quot;margin-top&quot;:&quot;0&quot;,&quot;margin-bottom&quot;:&quot;24px&quot;,&quot;font-size&quot;:&quot;1.5rem&quot;,&quot;font-weight&quot;:&quot;600&quot;},&quot;components&quot;:[],&quot;isSvg&quot;:false,&quot;content&quot;:&quot;Contact Us&quot;},{&quot;id&quot;:&quot;id-17474643088609354&quot;,&quot;type&quot;:&quot;div&quot;,&quot;attributes&quot;:{},&quot;style&quot;:{&quot;margin-bottom&quot;:&quot;16px&quot;},&quot;components&quot;:[{&quot;id&quot;:&quot;id-17474643088602415&quot;,&quot;type&quot;:&quot;label&quot;,&quot;attributes&quot;:{},&quot;style&quot;:{&quot;display&quot;:&quot;block&quot;,&quot;margin-bottom&quot;:&quot;8px&quot;,&quot;font-weight&quot;:&quot;500&quot;},&quot;components&quot;:[],&quot;isSvg&quot;:false,&quot;content&quot;:&quot;Name&quot;},{&quot;id&quot;:&quot;id-17474643088609711&quot;,&quot;type&quot;:&quot;input&quot;,&quot;attributes&quot;:{&quot;type&quot;:&quot;text&quot;,&quot;placeholder&quot;:&quot;Enter your name&quot;},&quot;style&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;padding&quot;:&quot;8px 12px&quot;,&quot;border&quot;:&quot;1px solid #e2e8f0&quot;,&quot;border-radius&quot;:&quot;4px&quot;},&quot;components&quot;:[],&quot;isSvg&quot;:false}],&quot;isSvg&quot;:false},{&quot;id&quot;:&quot;id-17474643088601907&quot;,&quot;type&quot;:&quot;div&quot;,&quot;attributes&quot;:{},&quot;style&quot;:{&quot;margin-bottom&quot;:&quot;16px&quot;},&quot;components&quot;:[{&quot;id&quot;:&quot;id-17474643088603863&quot;,&quot;type&quot;:&quot;label&quot;,&quot;attributes&quot;:{},&quot;style&quot;:{&quot;display&quot;:&quot;block&quot;,&quot;margin-bottom&quot;:&quot;8px&quot;,&quot;font-weight&quot;:&quot;500&quot;},&quot;components&quot;:[],&quot;isSvg&quot;:false,&quot;content&quot;:&quot;Email&quot;},{&quot;id&quot;:&quot;id-17474643088605004&quot;,&quot;type&quot;:&quot;input&quot;,&quot;attributes&quot;:{&quot;type&quot;:&quot;email&quot;,&quot;placeholder&quot;:&quot;Enter your email&quot;},&quot;style&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;padding&quot;:&quot;8px 12px&quot;,&quot;border&quot;:&quot;1px solid #e2e8f0&quot;,&quot;border-radius&quot;:&quot;4px&quot;},&quot;components&quot;:[],&quot;isSvg&quot;:false}],&quot;isSvg&quot;:false},{&quot;id&quot;:&quot;id-17474643088602466&quot;,&quot;type&quot;:&quot;div&quot;,&quot;attributes&quot;:{},&quot;style&quot;:{&quot;margin-bottom&quot;:&quot;16px&quot;},&quot;components&quot;:[{&quot;id&quot;:&quot;id-17474643088609799&quot;,&quot;type&quot;:&quot;label&quot;,&quot;attributes&quot;:{},&quot;style&quot;:{&quot;display&quot;:&quot;block&quot;,&quot;margin-bottom&quot;:&quot;8px&quot;,&quot;font-weight&quot;:&quot;500&quot;},&quot;components&quot;:[],&quot;isSvg&quot;:false,&quot;content&quot;:&quot;Subject&quot;},{&quot;id&quot;:&quot;id-17474643088602170&quot;,&quot;type&quot;:&quot;select&quot;,&quot;attributes&quot;:{},&quot;style&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;padding&quot;:&quot;8px 12px&quot;,&quot;border&quot;:&quot;1px solid #e2e8f0&quot;,&quot;border-radius&quot;:&quot;4px&quot;,&quot;background-color&quot;:&quot;white&quot;},&quot;components&quot;:[{&quot;id&quot;:&quot;id-17474643088607593&quot;,&quot;type&quot;:&quot;option&quot;,&quot;attributes&quot;:{&quot;value&quot;:&quot;&quot;,&quot;disabled&quot;:&quot;&quot;,&quot;selected&quot;:&quot;&quot;},&quot;style&quot;:{},&quot;components&quot;:[],&quot;isSvg&quot;:false,&quot;content&quot;:&quot;Select a subject&quot;},{&quot;id&quot;:&quot;id-17474643088604949&quot;,&quot;type&quot;:&quot;option&quot;,&quot;attributes&quot;:{&quot;value&quot;:&quot;general&quot;},&quot;style&quot;:{},&quot;components&quot;:[],&quot;isSvg&quot;:false,&quot;content&quot;:&quot;General Inquiry&quot;},{&quot;id&quot;:&quot;id-17474643088609115&quot;,&quot;type&quot;:&quot;option&quot;,&quot;attributes&quot;:{&quot;value&quot;:&quot;support&quot;},&quot;style&quot;:{},&quot;components&quot;:[],&quot;isSvg&quot;:false,&quot;content&quot;:&quot;Technical Support&quot;},{&quot;id&quot;:&quot;id-17474643088602896&quot;,&quot;type&quot;:&quot;option&quot;,&quot;attributes&quot;:{&quot;value&quot;:&quot;billing&quot;},&quot;style&quot;:{},&quot;components&quot;:[],&quot;isSvg&quot;:false,&quot;content&quot;:&quot;Billing Question&quot;},{&quot;id&quot;:&quot;id-17474643088608256&quot;,&quot;type&quot;:&quot;option&quot;,&quot;attributes&quot;:{&quot;value&quot;:&quot;other&quot;},&quot;style&quot;:{},&quot;components&quot;:[],&quot;isSvg&quot;:false,&quot;content&quot;:&quot;Other&quot;}],&quot;isSvg&quot;:false}],&quot;isSvg&quot;:false},{&quot;id&quot;:&quot;id-17474643088608957&quot;,&quot;type&quot;:&quot;div&quot;,&quot;attributes&quot;:{},&quot;style&quot;:{&quot;margin-bottom&quot;:&quot;16px&quot;},&quot;components&quot;:[{&quot;id&quot;:&quot;id-17474643088606712&quot;,&quot;type&quot;:&quot;label&quot;,&quot;attributes&quot;:{},&quot;style&quot;:{&quot;display&quot;:&quot;block&quot;,&quot;margin-bottom&quot;:&quot;8px&quot;,&quot;font-weight&quot;:&quot;500&quot;},&quot;components&quot;:[],&quot;isSvg&quot;:false,&quot;content&quot;:&quot;Message&quot;},{&quot;id&quot;:&quot;id-17474643088601139&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;attributes&quot;:{&quot;placeholder&quot;:&quot;Enter your message&quot;,&quot;rows&quot;:&quot;4&quot;},&quot;style&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;padding&quot;:&quot;8px 12px&quot;,&quot;border&quot;:&quot;1px solid #e2e8f0&quot;,&quot;border-radius&quot;:&quot;4px&quot;,&quot;resize&quot;:&quot;vertical&quot;},&quot;components&quot;:[],&quot;isSvg&quot;:false}],&quot;isSvg&quot;:false},{&quot;id&quot;:&quot;id-17474643088605091&quot;,&quot;type&quot;:&quot;div&quot;,&quot;attributes&quot;:{},&quot;style&quot;:{&quot;margin-bottom&quot;:&quot;24px&quot;},&quot;components&quot;:[{&quot;id&quot;:&quot;id-17474643088604156&quot;,&quot;type&quot;:&quot;label&quot;,&quot;attributes&quot;:{},&quot;style&quot;:{&quot;display&quot;:&quot;flex&quot;,&quot;align-items&quot;:&quot;center&quot;,&quot;cursor&quot;:&quot;pointer&quot;},&quot;components&quot;:[{&quot;id&quot;:&quot;id-17474643088606150&quot;,&quot;type&quot;:&quot;input&quot;,&quot;attributes&quot;:{&quot;type&quot;:&quot;checkbox&quot;},&quot;style&quot;:{&quot;margin-right&quot;:&quot;8px&quot;,&quot;width&quot;:&quot;16px&quot;,&quot;height&quot;:&quot;16px&quot;},&quot;components&quot;:[],&quot;isSvg&quot;:false},{&quot;id&quot;:&quot;id-17474643088603622&quot;,&quot;type&quot;:&quot;span&quot;,&quot;attributes&quot;:{},&quot;style&quot;:{},&quot;components&quot;:[],&quot;isSvg&quot;:false,&quot;content&quot;:&quot;I agree to be contacted about my inquiry&quot;}],&quot;isSvg&quot;:false}],&quot;isSvg&quot;:false},{&quot;id&quot;:&quot;id-17474643088605344&quot;,&quot;type&quot;:&quot;div&quot;,&quot;attributes&quot;:{},&quot;style&quot;:{},&quot;components&quot;:[{&quot;id&quot;:&quot;id-17474643088609028&quot;,&quot;type&quot;:&quot;button&quot;,&quot;attributes&quot;:{&quot;type&quot;:&quot;submit&quot;},&quot;style&quot;:{&quot;background-color&quot;:&quot;#4299e1&quot;,&quot;color&quot;:&quot;white&quot;,&quot;padding&quot;:&quot;10px 16px&quot;,&quot;border&quot;:&quot;none&quot;,&quot;border-radius&quot;:&quot;4px&quot;,&quot;font-weight&quot;:&quot;500&quot;,&quot;cursor&quot;:&quot;pointer&quot;},&quot;components&quot;:[],&quot;isSvg&quot;:false,&quot;content&quot;:&quot;Send Message&quot;}],&quot;isSvg&quot;:false}],&quot;isSvg&quot;:false,&quot;category&quot;:&quot;Forms&quot;,&quot;label&quot;:&quot;Complete Contact Form&quot;}],&quot;canvas&quot;:{&quot;width&quot;:1200,&quot;height&quot;:800,&quot;backgroundColor&quot;:&quot;#ffffff&quot;}},&quot;project_id&quot;:&quot;2bd3d419-89ab-440b-9e47-230047b8ae5f&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://api.simplita.ai/creation_enginev2/api/canvas-data">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">creation_enginev2/api/canvas-data</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;project_id&quot;:&quot;2bd3d419-89ab-440b-9e47-230047b8ae5f&quot;,&quot;pages&quot;:[{&quot;pageId&quot;:&quot;page-17474643002863626&quot;,&quot;pageName&quot;:&quot;Page 1&quot;,&quot;components&quot;:[{&quot;id&quot;:&quot;id-17474643088601317&quot;,&quot;type&quot;:&quot;form&quot;,&quot;attributes&quot;:{},&quot;style&quot;:{&quot;padding&quot;:&quot;24px&quot;,&quot;border&quot;:&quot;1px solid #e2e8f0&quot;,&quot;border-radius&quot;:&quot;8px&quot;,&quot;max-width&quot;:&quot;1550px&quot;,&quot;margin&quot;:&quot;0 auto&quot;},&quot;components&quot;:[{&quot;id&quot;:&quot;id-17474643088608894&quot;,&quot;type&quot;:&quot;h2&quot;,&quot;attributes&quot;:{},&quot;style&quot;:{&quot;margin-top&quot;:&quot;0&quot;,&quot;margin-bottom&quot;:&quot;24px&quot;,&quot;font-size&quot;:&quot;1.5rem&quot;,&quot;font-weight&quot;:&quot;600&quot;},&quot;components&quot;:[],&quot;isSvg&quot;:false,&quot;content&quot;:&quot;Contact Us&quot;},{&quot;id&quot;:&quot;id-17474643088609354&quot;,&quot;type&quot;:&quot;div&quot;,&quot;attributes&quot;:{},&quot;style&quot;:{&quot;margin-bottom&quot;:&quot;16px&quot;},&quot;components&quot;:[{&quot;id&quot;:&quot;id-17474643088602415&quot;,&quot;type&quot;:&quot;label&quot;,&quot;attributes&quot;:{},&quot;style&quot;:{&quot;display&quot;:&quot;block&quot;,&quot;margin-bottom&quot;:&quot;8px&quot;,&quot;font-weight&quot;:&quot;500&quot;},&quot;components&quot;:[],&quot;isSvg&quot;:false,&quot;content&quot;:&quot;Name&quot;},{&quot;id&quot;:&quot;id-17474643088609711&quot;,&quot;type&quot;:&quot;input&quot;,&quot;attributes&quot;:{&quot;type&quot;:&quot;text&quot;,&quot;placeholder&quot;:&quot;Enter your name&quot;},&quot;style&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;padding&quot;:&quot;8px 12px&quot;,&quot;border&quot;:&quot;1px solid #e2e8f0&quot;,&quot;border-radius&quot;:&quot;4px&quot;},&quot;components&quot;:[],&quot;isSvg&quot;:false}],&quot;isSvg&quot;:false},{&quot;id&quot;:&quot;id-17474643088601907&quot;,&quot;type&quot;:&quot;div&quot;,&quot;attributes&quot;:{},&quot;style&quot;:{&quot;margin-bottom&quot;:&quot;16px&quot;},&quot;components&quot;:[{&quot;id&quot;:&quot;id-17474643088603863&quot;,&quot;type&quot;:&quot;label&quot;,&quot;attributes&quot;:{},&quot;style&quot;:{&quot;display&quot;:&quot;block&quot;,&quot;margin-bottom&quot;:&quot;8px&quot;,&quot;font-weight&quot;:&quot;500&quot;},&quot;components&quot;:[],&quot;isSvg&quot;:false,&quot;content&quot;:&quot;Email&quot;},{&quot;id&quot;:&quot;id-17474643088605004&quot;,&quot;type&quot;:&quot;input&quot;,&quot;attributes&quot;:{&quot;type&quot;:&quot;email&quot;,&quot;placeholder&quot;:&quot;Enter your email&quot;},&quot;style&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;padding&quot;:&quot;8px 12px&quot;,&quot;border&quot;:&quot;1px solid #e2e8f0&quot;,&quot;border-radius&quot;:&quot;4px&quot;},&quot;components&quot;:[],&quot;isSvg&quot;:false}],&quot;isSvg&quot;:false},{&quot;id&quot;:&quot;id-17474643088602466&quot;,&quot;type&quot;:&quot;div&quot;,&quot;attributes&quot;:{},&quot;style&quot;:{&quot;margin-bottom&quot;:&quot;16px&quot;},&quot;components&quot;:[{&quot;id&quot;:&quot;id-17474643088609799&quot;,&quot;type&quot;:&quot;label&quot;,&quot;attributes&quot;:{},&quot;style&quot;:{&quot;display&quot;:&quot;block&quot;,&quot;margin-bottom&quot;:&quot;8px&quot;,&quot;font-weight&quot;:&quot;500&quot;},&quot;components&quot;:[],&quot;isSvg&quot;:false,&quot;content&quot;:&quot;Subject&quot;},{&quot;id&quot;:&quot;id-17474643088602170&quot;,&quot;type&quot;:&quot;select&quot;,&quot;attributes&quot;:{},&quot;style&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;padding&quot;:&quot;8px 12px&quot;,&quot;border&quot;:&quot;1px solid #e2e8f0&quot;,&quot;border-radius&quot;:&quot;4px&quot;,&quot;background-color&quot;:&quot;white&quot;},&quot;components&quot;:[{&quot;id&quot;:&quot;id-17474643088607593&quot;,&quot;type&quot;:&quot;option&quot;,&quot;attributes&quot;:{&quot;value&quot;:&quot;&quot;,&quot;disabled&quot;:&quot;&quot;,&quot;selected&quot;:&quot;&quot;},&quot;style&quot;:{},&quot;components&quot;:[],&quot;isSvg&quot;:false,&quot;content&quot;:&quot;Select a subject&quot;},{&quot;id&quot;:&quot;id-17474643088604949&quot;,&quot;type&quot;:&quot;option&quot;,&quot;attributes&quot;:{&quot;value&quot;:&quot;general&quot;},&quot;style&quot;:{},&quot;components&quot;:[],&quot;isSvg&quot;:false,&quot;content&quot;:&quot;General Inquiry&quot;},{&quot;id&quot;:&quot;id-17474643088609115&quot;,&quot;type&quot;:&quot;option&quot;,&quot;attributes&quot;:{&quot;value&quot;:&quot;support&quot;},&quot;style&quot;:{},&quot;components&quot;:[],&quot;isSvg&quot;:false,&quot;content&quot;:&quot;Technical Support&quot;},{&quot;id&quot;:&quot;id-17474643088602896&quot;,&quot;type&quot;:&quot;option&quot;,&quot;attributes&quot;:{&quot;value&quot;:&quot;billing&quot;},&quot;style&quot;:{},&quot;components&quot;:[],&quot;isSvg&quot;:false,&quot;content&quot;:&quot;Billing Question&quot;},{&quot;id&quot;:&quot;id-17474643088608256&quot;,&quot;type&quot;:&quot;option&quot;,&quot;attributes&quot;:{&quot;value&quot;:&quot;other&quot;},&quot;style&quot;:{},&quot;components&quot;:[],&quot;isSvg&quot;:false,&quot;content&quot;:&quot;Other&quot;}],&quot;isSvg&quot;:false}],&quot;isSvg&quot;:false},{&quot;id&quot;:&quot;id-17474643088608957&quot;,&quot;type&quot;:&quot;div&quot;,&quot;attributes&quot;:{},&quot;style&quot;:{&quot;margin-bottom&quot;:&quot;16px&quot;},&quot;components&quot;:[{&quot;id&quot;:&quot;id-17474643088606712&quot;,&quot;type&quot;:&quot;label&quot;,&quot;attributes&quot;:{},&quot;style&quot;:{&quot;display&quot;:&quot;block&quot;,&quot;margin-bottom&quot;:&quot;8px&quot;,&quot;font-weight&quot;:&quot;500&quot;},&quot;components&quot;:[],&quot;isSvg&quot;:false,&quot;content&quot;:&quot;Message&quot;},{&quot;id&quot;:&quot;id-17474643088601139&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;attributes&quot;:{&quot;placeholder&quot;:&quot;Enter your message&quot;,&quot;rows&quot;:&quot;4&quot;},&quot;style&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;padding&quot;:&quot;8px 12px&quot;,&quot;border&quot;:&quot;1px solid #e2e8f0&quot;,&quot;border-radius&quot;:&quot;4px&quot;,&quot;resize&quot;:&quot;vertical&quot;},&quot;components&quot;:[],&quot;isSvg&quot;:false}],&quot;isSvg&quot;:false},{&quot;id&quot;:&quot;id-17474643088605091&quot;,&quot;type&quot;:&quot;div&quot;,&quot;attributes&quot;:{},&quot;style&quot;:{&quot;margin-bottom&quot;:&quot;24px&quot;},&quot;components&quot;:[{&quot;id&quot;:&quot;id-17474643088604156&quot;,&quot;type&quot;:&quot;label&quot;,&quot;attributes&quot;:{},&quot;style&quot;:{&quot;display&quot;:&quot;flex&quot;,&quot;align-items&quot;:&quot;center&quot;,&quot;cursor&quot;:&quot;pointer&quot;},&quot;components&quot;:[{&quot;id&quot;:&quot;id-17474643088606150&quot;,&quot;type&quot;:&quot;input&quot;,&quot;attributes&quot;:{&quot;type&quot;:&quot;checkbox&quot;},&quot;style&quot;:{&quot;margin-right&quot;:&quot;8px&quot;,&quot;width&quot;:&quot;16px&quot;,&quot;height&quot;:&quot;16px&quot;},&quot;components&quot;:[],&quot;isSvg&quot;:false},{&quot;id&quot;:&quot;id-17474643088603622&quot;,&quot;type&quot;:&quot;span&quot;,&quot;attributes&quot;:{},&quot;style&quot;:{},&quot;components&quot;:[],&quot;isSvg&quot;:false,&quot;content&quot;:&quot;I agree to be contacted about my inquiry&quot;}],&quot;isSvg&quot;:false}],&quot;isSvg&quot;:false},{&quot;id&quot;:&quot;id-17474643088605344&quot;,&quot;type&quot;:&quot;div&quot;,&quot;attributes&quot;:{},&quot;style&quot;:{},&quot;components&quot;:[{&quot;id&quot;:&quot;id-17474643088609028&quot;,&quot;type&quot;:&quot;button&quot;,&quot;attributes&quot;:{&quot;type&quot;:&quot;submit&quot;},&quot;style&quot;:{&quot;background-color&quot;:&quot;#4299e1&quot;,&quot;color&quot;:&quot;white&quot;,&quot;padding&quot;:&quot;10px 16px&quot;,&quot;border&quot;:&quot;none&quot;,&quot;border-radius&quot;:&quot;4px&quot;,&quot;font-weight&quot;:&quot;500&quot;,&quot;cursor&quot;:&quot;pointer&quot;},&quot;components&quot;:[],&quot;isSvg&quot;:false,&quot;content&quot;:&quot;Send Message&quot;}],&quot;isSvg&quot;:false}],&quot;isSvg&quot;:false,&quot;category&quot;:&quot;Forms&quot;,&quot;label&quot;:&quot;Complete Contact Form&quot;}],&quot;canvas&quot;:{&quot;width&quot;:1200,&quot;height&quot;:800,&quot;backgroundColor&quot;:&quot;#ffffff&quot;}}],&quot;theme&quot;:{&quot;id&quot;:&quot;CORPORATE-teal&quot;,&quot;name&quot;:&quot;Corporate Teal&quot;,&quot;colors&quot;:{&quot;background&quot;:&quot;#FFFFFF&quot;,&quot;primary&quot;:&quot;#00796B&quot;,&quot;secondary&quot;:&quot;#00695C&quot;,&quot;accent&quot;:&quot;#FFC107&quot;,&quot;heading&quot;:&quot;#00796B&quot;,&quot;body&quot;:&quot;#424242&quot;,&quot;muted&quot;:&quot;#757575&quot;,&quot;border&quot;:&quot;#E0E0E0&quot;,&quot;error&quot;:&quot;#D32F2F&quot;,&quot;success&quot;:&quot;#388E3C&quot;,&quot;warning&quot;:&quot;#FFA000&quot;,&quot;info&quot;:&quot;#0288D1&quot;,&quot;btn_txt&quot;:&quot;#FFFFFF&quot;,&quot;headerBackground&quot;:&quot;#00796B&quot;,&quot;contentBackground&quot;:&quot;#FFFFFF&quot;,&quot;footerBackground&quot;:&quot;#FAFAFA&quot;,&quot;gray&quot;:{&quot;100&quot;:&quot;#F5F5F5&quot;,&quot;200&quot;:&quot;#EEEEEE&quot;,&quot;300&quot;:&quot;#E0E0E0&quot;,&quot;400&quot;:&quot;#BDBDBD&quot;,&quot;500&quot;:&quot;#9E9E9E&quot;}},&quot;fonts&quot;:{&quot;body&quot;:&quot;Roboto, system-ui, sans-serif&quot;,&quot;heading&quot;:&quot;Lato, Arial, sans-serif&quot;},&quot;fontSizes&quot;:{&quot;h1&quot;:&quot;text-3xl&quot;,&quot;h2&quot;:&quot;text-2xl&quot;,&quot;h3&quot;:&quot;text-xl&quot;,&quot;h4&quot;:&quot;text-lg&quot;,&quot;h5&quot;:&quot;text-base&quot;,&quot;h6&quot;:&quot;text-sm&quot;,&quot;body&quot;:&quot;text-base&quot;},&quot;category&quot;:&quot;Modern&quot;}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+          <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+          <ResultCollector guiclass="SimpleDataWriter" testclass="ResultCollector" testname="Simple Data Writer">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename">D:\Lakshman Backup 27-03-2025\D Drive\New Verticle\Simplita.ai\Performance Testing\Login&amp;Workspace\Creation_Engine_ResultsViewResultstable_500.csv</stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
