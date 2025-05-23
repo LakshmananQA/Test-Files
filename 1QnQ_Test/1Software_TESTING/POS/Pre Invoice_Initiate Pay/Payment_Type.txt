@@ -1,0 +1,31 @@
+Pos - billing
+
+1.
+Payment process - machine integration
+
+Initiate pay will display <> Cash in payment button dropdown which have Cash, UPI, Card and split
+
+unable to edit and add coupan while click iniate pay button
+
+QR code will
+
+
+2. Edit billing
+
+Cash - We can edit the 
+
+
+Swipe card
+
+
+
+
+POS Web Application - Preinvoice Page Updates
+Payment Dropdown Enhancement:Added buttons for initiating payment button through POS machines.
+Initiate Pay Buttons are visible only if the branch has a POS machine and its status is updated in the branch details table.
+Conditional Payment Process:If no POS machine is provided, users follow the existing payment process.
+For branches with a POS machine, users select the payment type and click “Initiate Pay” to start the payment process.
+Automatic Verification:Payment initiation triggers automatic verification in the background.
+Post-Payment Initiation Restrictions:Users cannot add items, delete items, or apply coupons after initiating payment.
+Edit Invoice Page:If payment type is cash, users can update the bill as needed.
+If payment type is not cash, users cannot apply coupons, delete items, or add items.

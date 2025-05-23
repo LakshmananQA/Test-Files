@@ -1,0 +1,25 @@
+Manage Optical Item
+--Add Item
+--Optical Rate Details
+--Optical Rate History
+
+Purchase Management
+--Add Purchase
+--Purchase History
+--Add Suplier------Remove
+
+Branch Transfer
+--Add Branch Transfer
+--Branch Transfer Approval
+--Branch Transfer History
+--Branch Inward Status---------Pending
+
+Stock Movement Details
+--Overall Stock movement Details
+--Warehouse Stock Movement
+--Branch Stock Movement
+
+Reports
+--Purchase Report
+--Transfer Report
+--Sales Report
