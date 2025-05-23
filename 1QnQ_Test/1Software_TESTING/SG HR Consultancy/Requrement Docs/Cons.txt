@@ -1,0 +1,84 @@
+[Start]
+↓
+[Dashboard]
+↓
+[Click the Candidate icon]
+↓
+[Click the Negotiation menu]
+↓
+[Update the Preparing for Negotiation]
+↓
+[Enter the Gather Necessary Documents]
+↓
+[Enter the Understanding Candidate’s Expectations]
+↓
+[Enter the Setting the Stage for Fair Negotiation]
+↓
+[Update Conducting the Negotiation]
+↓
+[Enter the Communicating with the Candidate]
+↓
+[Enter the Communicating with the Client]
+↓
+[Enter the Handling Unreasonable Demands]
+↓
+[Update the Finalizing the Negotiation]
+↓
+{Enter the Reaching a Decision]
+↓
+[Enter the Allowing Time for Decision]
+↓
+[Enter the Handling Rejection]
+↓
+[Enter the Closing the Loop]
+↓
+[Update the Best Practices]
+↓
+[Enter the Maintain Professionalism]
+↓
+[Enter the Focus on Fairness]
+↓
+[Enter the Effective Communication]
+↓
+[End]
+
+
+
+1.Login Page Development
+2.Dashboard Design---Data fetch from existing Database tables
+3.Client Onboarding---Entry screen/List grid
+4.Capturing the Client Requirements Algorithm---Entry screen/List grid
+5.Research the Client’s Company, Review the Job Description, Prepare Questions for the Client, 
+
+6.Client Checklist---Client’s Onboarding Checklist page
+Research the Client’s Company, Review the Job Description (JD), Continuous Improvement
+
+7.Capturing the ATS Keyword Extraction Algorithm-----Need to breakdown the feature
+Extracting Keywords from the Job Description, Initial Review of the Job Description, Identifying Critical Keywords, Utilizing Keyword Tools for Analysis
+
+8.Capturing the Telephonic Interview Algorithm-------Need to breakdown the feature
+Preparation Before the Call, Matching the Candidate to the Job Profile, 
+
+9.Capturing the Resume Forwarding and Feedback Process---Need to breakdown the feature
+Resume Review and Formatting, File Naming and Storage
+
+10.Candidate Management System, Sending the Resume to the Client-----Need to breakdown the feature(Like Rapido and Zomato)
+Candidate Dashboard - After Login, Candidate Register, Resume Uploading Loading, Resume Upload Success,Candidate Job Search and Candidate Job Alert
+
+11.Level 1 Interview Scheduling and Feedback Process----Need to breakdown the feature
+Interview Scheduling menu, Receiving Interview Details from Client, Confirmation Process
+
+12.Level 2 Interview Scheduling and Feedback Process----Need to breakdown the feature
+Interview Scheduling menu, Receiving Interview Details from Client, Confirmation Process, Post-Interview Follow-Up
+
+12.Capturing the Negotiation Process---Need to breakdown the feature
+Preparing for Negotiation, Stage for Fair Negotiation, Finalizing the Negotiation
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+1.Understanding the Client Requirements
+
+Client Reuirement- using upload option with the proper template, which will store any screen
+
+2.20-Minute Intital Call with the Client
