@@ -1,0 +1,59 @@
+
+Thought for the day, Policies and Training
+
+Modules Name:
+
+>>>EMPLOYEE SELF-SERVICE PORTAL:
+
+-->Thought for the day;
+
+i) Thought for the day will be visible to the employees.
+ii) HR team update the data using Thought of the day.
+iii)0nce upload the details, it should display the EPR application. while login or loading the ERP.
+
+
+//////////////////////
+
+-->Policies;
+
+i) Policies will show the list of the organizational policies, and upon selecting a policy, 
+the detailed policy will be shown.
+ii) HR team update the data using >Policies.
+iii)0nce upload the details, it should display the EPR application. while selecting a policy.
+
+
+///////////////////
+--Training;
+
+i) Training details as below will be shown to the employee:
+		Programme name
+		Type
+		Hour
+ii) HR team update the data using Training.
+iii)0nce upload the details, it should display the EPR application. while selecting a policy.
+
+////////////////////
+
+
+
+Clarification:
+
+>>Thought for the day;
+1.When and where the pop up will be display
+2.What about the expiry date
+3.Who going to the access for module
+4.
+
+>>Ploicy;
+1.Data is hardcode?
+2.Values display with dropdown or pop up.
+3.
+
+>>Training;
+1.
+
+
+	
+
+Bill co-founded Microsoft Corporation in 1975 with Paul Allen and led the company to 
+become the worldwide leader in business and personal software and services.

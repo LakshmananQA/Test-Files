@@ -1,0 +1,11 @@
+Non-Moving Stock
+
+
+1.Move the stack for non sales tab past 3 month
+2.Transfer to 3 ro when good sales area
+3.Critical stock  include, 
+4.Need to approve the Cluster and store manager
+5.Data not getting move directly
+6.Dependices Report - 
+
+Consumption quantity Report 

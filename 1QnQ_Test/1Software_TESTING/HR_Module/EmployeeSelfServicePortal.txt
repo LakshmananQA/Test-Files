@@ -1,0 +1,13 @@
+○ Thought for the day :
+	Thought for the day will be visible to the employees.
+
+○ Policies :
+	Policies will show the list of the organizational policies, and upon selecting a policy, the detailed policy will be shown.
+
+○ Training : 
+	Training details as below will be shown to the employee:
+		Programme name
+		Type
+		Hour
+
+

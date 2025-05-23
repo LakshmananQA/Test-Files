@@ -1,0 +1,16 @@
+
+Wifi:
+
+http://192.168.0.134:8080/ERP-V0.1/index.html
+
+
+
+Lan:
+
+http://192.168.1.8:8080/ERP-V0.1/index.html
+
+pop
+as
+
+Manager Ledger Approval, Finance Ledger Approval, 
+Finance General Item List Verification andAsset Transfer
