@@ -1,0 +1,37 @@
+Qa Tester Daily Report
+
+Date: 02/08/2024
+Qa Tester Name:Lakshmanan
+
+1. Collaboration and Communication:
+
+    Team Meetings: Attend Itsm weekly review meeting and attend Fun activity 
+    Collaborative Tasks: No
+    Client Interaction: No
+
+2. Testing and Integration:
+
+    Testing Performed: Prepare Test case document for QnQ Healthcare Mobile care
+    Test Results: In-progress
+    Integration Activities: No
+
+3. Support Activity (Optional if needed):
+
+    User Support Requests: No
+    Issue Resolution: No
+    Support Documentation: No
+
+4. Challenges and Solutions:
+
+    Challenges Faced: Unable to use mobile app in laptom
+    Solutions Implemented: Try to ANy Desk
+
+5. Learning and Research:
+
+    New Technologies Researched: Testing related plugins
+    Skills Enhanced: I have learned fo how to use Any desk for mobile to Laptop
+
+6. Goals for Tomorrow:
+
+    Planned Tasks: Need to complete the Test case document and configure the Bluestak
+    Focus Areas: Give good quality Test case and give Good quality Product to customer

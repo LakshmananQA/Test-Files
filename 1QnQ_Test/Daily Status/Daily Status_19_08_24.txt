@@ -1,0 +1,37 @@
+Qa Tester Daily Report
+
+Date: 18/08/2024
+Qa Tester Name: Lakshmanan
+
+1. Collaboration and Communication:
+
+    Team Meetings: Daily standup meeting and Agile reverse KT
+    Collaborative Tasks: No
+    Client Interaction: No
+
+2. Testing and Integration:
+
+    Testing Performed: Prepare the Test case for Hr module and perfrom basic test for the HR module
+    Test Results: In-Progress
+    Integration Activities: No
+
+3. Support Activity (Optional if needed):
+
+    User Support Requests: No
+    Issue Resolution: No
+    Support Documentation: No
+
+4. Challenges and Solutions:
+
+    Challenges Faced: No
+    Solutions Implemented: No
+
+5. Learning and Research:
+
+    New Technologies Researched: No
+    Skills Enhanced: Spike concept in Agile
+
+6. Goals for Tomorrow:
+
+    Planned Tasks: Continue the test case for Hr module
+    Focus Areas: Give good quality Test case and give Good quality Product to customer

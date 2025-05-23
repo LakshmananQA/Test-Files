@@ -1,0 +1,20 @@
+1.story point:
+Story points in Agile are measurement units that estimate the total effort necessary to fully
+implement requirements analysis items or any additional work in progress.
+
+Elements in story point;
+>Complexity of the story point
+>Number of unknown process
+>Potential effort required to implement
+
+
+2.Velocity in agile:
+velocity is a metric that calculates how long user stories within a particular 
+sprint have taken to complete against their estimate. This allows project managers 
+to accurately predict how long future sprints, or an overall project, will take to complete.
+
+
+
+3.Burn down chart:
+A burndown chart is a tool used by Agile teams to gather information about work completed on a 
+project and work to be done in a given time period

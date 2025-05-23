@@ -1,0 +1,37 @@
+Qa Tester Daily Report
+
+Date: 09/08/2024
+Qa Tester Name: Lakshmanan
+
+1. Collaboration and Communication:
+
+    Team Meetings: Attend Alige framework Recap session and Fun friday
+    Collaborative Tasks: No
+    Client Interaction: No
+
+2. Testing and Integration:
+
+    Testing Performed: Perform Iteration-1 testing for QnQ Healthcare Mobile
+    Test Results: In-progress
+    Integration Activities: No
+
+3. Support Activity (Optional if needed):
+
+    User Support Requests: No
+    Issue Resolution: No
+    Support Documentation: No
+
+4. Challenges and Solutions:
+
+    Challenges Faced: No
+    Solutions Implemented: No
+
+5. Learning and Research:
+
+    New Technologies Researched: Scrum Events
+    Skills Enhanced: Agile methodologie
+
+6. Goals for Tomorrow:
+
+    Planned Tasks: Need to complete Testing for QnQ Mobile app testing
+    Focus Areas: Give good quality Test case and give Good quality Product to customer
